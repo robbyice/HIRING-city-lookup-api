@@ -16,8 +16,8 @@ straightforward, and the application manages just fine on the free t2.micro EC2 
 
 **Test Curl Commands**
 ```
-curl http://masonchallenge-env.xrgy8jsigy.us-east-2.elasticbeanstalk.com/suggestions?q=SEA
-curl http://masonchallenge-env.xrgy8jsigy.us-east-2.elasticbeanstalk.com/suggestions?q=SEA&latitude=47.5&longitude=-121.33
+curl -v "http://masonchallenge-env.xrgy8jsigy.us-east-2.elasticbeanstalk.com/suggestions?q=SEA"
+curl -v "http://masonchallenge-env.xrgy8jsigy.us-east-2.elasticbeanstalk.com/suggestions?q=SEA&latitude=47.5&longitude=-121.33"
 ```
 
 **Running Locally**
