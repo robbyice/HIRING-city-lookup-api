@@ -3,6 +3,7 @@ package rob.masonchallenge.city;
 import org.springframework.util.StringUtils;
 
 import java.io.*;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -16,7 +17,7 @@ public class CityRepository {
 
         this.cities = new ArrayList<>();
 
-        try (BufferedReader br = new BufferedReader(new InputStreamReader(fileStream))) {
+        try (BufferedReader br = new BufferedReader(new InputStreamReader(fileStream, StandardCharsets.UTF_8))) {
 
             String line;
             while ((line = br.readLine()) != null) {

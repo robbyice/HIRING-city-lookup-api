@@ -1,6 +1,7 @@
 package rob.masonchallenge.city;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -13,7 +14,7 @@ import java.util.Optional;
 public class CityController {
     @Autowired private CityMatchingService cityMatchingService;
 
-    @GetMapping("/suggestions")
+    @GetMapping(value = "/suggestions", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     public List<CityMatchResult> getCitySuggestions(@RequestParam String q,
                                                     @RequestParam Optional<Double> latitude,
                                                     @RequestParam Optional<Double> longitude,
