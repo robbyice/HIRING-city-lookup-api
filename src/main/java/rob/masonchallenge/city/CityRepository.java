@@ -2,10 +2,7 @@ package rob.masonchallenge.city;
 
 import org.springframework.util.StringUtils;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -13,13 +10,13 @@ import java.util.stream.Collectors;
 public class CityRepository {
     private ArrayList<City> cities;
 
-    public CityRepository(File citiesData) {
+    public CityRepository(InputStream fileStream) {
 
         long start = System.currentTimeMillis();
 
         this.cities = new ArrayList<>();
 
-        try (BufferedReader br = new BufferedReader(new FileReader(citiesData))) {
+        try (BufferedReader br = new BufferedReader(new InputStreamReader(fileStream))) {
 
             String line;
             while ((line = br.readLine()) != null) {
