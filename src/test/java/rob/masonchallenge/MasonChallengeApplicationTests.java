@@ -17,6 +17,6 @@ public class MasonChallengeApplicationTests {
 
 	@Test
 	public void loadsFileOnStartup() {
-		assertThat(cityRepository.hasStuff()).isEqualTo(true);
+		assertThat(cityRepository.getCities().size()).isEqualTo(2237465);
 	}
 }
