@@ -7,7 +7,7 @@ import lombok.Data;
 @Builder
 public class City {
     private final String name;
-    private final String alternateName;
+    private final String alternateNames;
     private final double latitude;
     private final double longitude;
 }

@@ -6,7 +6,6 @@ import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
 
-import java.text.DecimalFormat;
 import java.util.List;
 
 import static java.util.Arrays.asList;
@@ -25,19 +24,19 @@ public class CityMatchingServiceTest {
     public void setUp() {
         city1 = City.builder()
                 .name("name1")
-                .alternateName("alternateName1")
+                .alternateNames("alternateName1")
                 .latitude(10.0)
                 .longitude(20.0)
                 .build();
         city2 = City.builder()
                 .name("name2")
-                .alternateName("alternateName2")
+                .alternateNames("alternateName2")
                 .latitude(20.0)
                 .longitude(40.0)
                 .build();
         city3 = City.builder()
                 .name("name3")
-                .alternateName("alternateName3")
+                .alternateNames("alternateName3")
                 .latitude(40.0)
                 .longitude(80.0)
                 .build();
