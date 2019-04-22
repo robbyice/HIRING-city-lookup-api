@@ -15,7 +15,7 @@ public class CityRepository {
 
     public CityRepository(File citiesData) {
 
-        System.out.println("Reading in City Data");
+        long start = System.currentTimeMillis();
 
         this.cities = new ArrayList<>();
 
@@ -31,7 +31,9 @@ public class CityRepository {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        System.out.println("Done reading in City Data");
+
+        long end = System.currentTimeMillis();
+        System.out.println("Read city data in " +  (end - start) + " milliseconds");
     }
 
     public List<City> getCities() {
@@ -39,13 +41,15 @@ public class CityRepository {
     }
 
     public List<City> findMatchingCities(String searchTerm) {
-        System.out.println("Beginning city search");
+        long start = System.currentTimeMillis();
 
         List<City> matchingCities = this.cities.stream()
                 .filter((City city) -> StringUtils.startsWithIgnoreCase(city.getName(), searchTerm))
                 .collect(Collectors.toList());
 
-        System.out.println("Ending city search");
+        long end = System.currentTimeMillis();
+        System.out.println("Found matching cities in " +  (end - start) + " milliseconds");
+
         return matchingCities;
     }
 }
