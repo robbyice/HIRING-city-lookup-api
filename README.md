@@ -4,14 +4,15 @@
 
 ### Notes
 
-For this challenge I elected to write a Spring Boot application - it is pretty quick to set up a basic web application.
-Since I chose not to use a database, it was also easy to use Spring to package the cities data text file inside
-the JAR being deployed to AWS. On startup the application reads from the cities15000.txt Geoname data file and loads the 
-city data into memory. For this challenge and data at this scale this seemed fine - it only caused a minor slowdown in 
-startup and response times even for the larger (1.4GB) data files. Naturally with further specfications clarified and
-required by the challenge a more intentional solution will be required.
+For this challenge I elected to write a Spring Boot application - it is pretty quick to set up a basic web app.
+Also since I chose not to use a database, Spring made it easy to package the cities data text file inside the application 
+JAR being deployed to AWS. On startup the application reads from this data, the cities15000.txt Geoname data file, and 
+loads the city data into memory. For this challenge and data at this scale keeping it all in memory seemed fine - it only 
+caused a minor slowdown in startup and response times even for the larger (1.4GB) data files. Naturally with further 
+requirements specified by the challenge a more intentional solution would be required.
 
-Initially I had intended to deploy the app onto PWS, but ended up using AWS ElasticBeanstalk instead.
+Initially I had intended to deploy the app onto PWS, but ended up using AWS ElasticBeanstalk instead. This was pretty
+straightforward, and the application manages just fine on the free t2.micro EC2 instance it is using.
 
 **Test Curl Commands**
 ```
@@ -37,9 +38,9 @@ cities with population > 15,000.
 longitude are not specified. I omitted score for non-location-based queries. For calculating the score I just came up
 with some random algorithm.
 - In the source data, cities can have a large number of "alternateNames". The specification only mentions that match 
-results have a name to help disambiguate - it does not make clear whether this is a list of alternate names, or a single 
-of many alternate names, or the regular city name, etc. I ended up just leaving the field as a comma-delimited list of 
-all alternateNames provided for the city.
+results have a name to help disambiguate similarly named cities - it does not make clear whether this is a list of 
+these alternate names, or a just one of those alternate names, or a different data field, etc. I ended up just leaving 
+the field as a comma-delimited list of all alternateNames provided for the city.
 
 ### References
 - Geonames provides city lists Canada and the USA. See http://download.geonames.org/export/dump/readme.txt
