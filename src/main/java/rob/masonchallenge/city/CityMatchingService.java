@@ -20,13 +20,29 @@ public class CityMatchingService {
     }
 
     public List<CityMatchResult> findMatchingCitiesNearLocation(String q, Double latitude, Double longitude) {
-        return cityRepository.findMatchingCities(q).stream()
+        List<CityMatchResult> sorted = cityRepository.findMatchingCities(q).stream()
                 .map(city -> CityMatchResult.builder()
                         .city(city)
                         .distance(calculateDistanceInMeters(city, latitude, longitude))
                         .build())
                 .sorted()
                 .collect(Collectors.toList());
+
+        if (sorted.isEmpty()) {
+            return sorted;
+        }
+
+        double closest = sorted.get(0).getDistance();
+        double furthest = sorted.get(sorted.size() - 1).getDistance();
+
+        return sorted
+                .stream()
+                .map(cityMatchResult -> cityMatchResult.toBuilder().score(calculateScore(cityMatchResult.getDistance(), closest, furthest)).build())
+                .collect(Collectors.toList());
+    }
+
+    private double calculateScore(double distance, double closest, double furthest) {
+        return ((furthest - distance) / (furthest - closest)) * 1.0;
     }
 
     static double calculateDistanceInMeters(City city, Double latitude, Double longitude) {

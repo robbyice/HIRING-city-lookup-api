@@ -50,10 +50,12 @@ public class CityControllerTest {
                 CityMatchResult.builder()
                         .city(city1)
                         .score(1.0)
+                        .distance(10.0)
                         .build(),
                 CityMatchResult.builder()
                         .city(city2)
                         .score(0.0)
+                        .distance(20.0)
                         .build()
         );
     }
