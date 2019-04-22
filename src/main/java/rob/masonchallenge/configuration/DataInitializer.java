@@ -11,7 +11,7 @@ import java.io.InputStream;
 @Configuration
 public class DataInitializer {
 
-    final ResourceLoader resourceLoader;
+    private final ResourceLoader resourceLoader;
 
     public DataInitializer(ResourceLoader resourceLoader) {
         this.resourceLoader = resourceLoader;
