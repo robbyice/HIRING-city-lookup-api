@@ -8,8 +8,9 @@ For this challenge I elected to write a Spring Boot application - it is pretty q
 Also since I chose not to use a database, Spring made it easy to package the cities data text file inside the application 
 JAR being deployed to AWS. On startup the application reads from this data, the cities15000.txt Geoname data file, and 
 loads the city data into memory. For this challenge and data at this scale keeping it all in memory seemed fine - it only 
-caused a minor slowdown in startup and response times even for the larger (1.4GB) data files. Naturally with further 
-requirements specified by the challenge a more intentional solution would be required.
+caused a minor slowdown in startup and response times even for the larger (1.4GB) data files. Having to package that into
+the JAR would not be great, so at higher volumes of data or with further requirements specified by the challenge a more 
+intentional solution would be required.
 
 Initially I had intended to deploy the app onto PWS, but ended up using AWS ElasticBeanstalk instead. This was pretty
 straightforward, and the application manages just fine on the free t2.micro EC2 instance it is using.
