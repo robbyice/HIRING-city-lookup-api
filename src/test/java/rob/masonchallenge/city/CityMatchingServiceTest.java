@@ -60,7 +60,7 @@ public class CityMatchingServiceTest {
     }
 
     @Test
-    public void findMatchingCitiesNearLocation_returnsMatchingCities_orderedByDistanceToLocation_includesScore() {
+    public void findMatchingCitiesNearLocation_returnsMatchingCitiesWithScore_orderedByDistanceToLocation() {
         List<CityMatchResult> result = subject.findMatchingCitiesNearLocation("searchTerm", 8.0, 16.0);
 
         double city1ExpectedDistance = CityMatchingService.calculateDistanceInMeters(city1, 8.0, 16.0);

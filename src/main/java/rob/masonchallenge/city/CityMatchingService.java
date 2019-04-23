@@ -46,7 +46,7 @@ public class CityMatchingService {
     }
 
     static double calculateDistanceInMeters(City city, Double latitude, Double longitude) {
-        final int R = 6371; // Radius of the earth
+        final int R = 6371;
 
         double lat1 = city.getLatitude();
         double long1 = city.getLongitude();

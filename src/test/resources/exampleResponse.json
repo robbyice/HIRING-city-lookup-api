@@ -1,0 +1,86 @@
+[
+  {
+    "name": "SeaTac",
+    "alternateNames": "Siatak,Sitak,shitakku,sitaeg,sy tk  washyngtn,sytak,xi ta ke,Сиатак,Ситак,سيتاك,سی تک، واشینگتن,シータック,西塔科,시택",
+    "latitude": 47.44846,
+    "longitude": -122.29217,
+    "score": 1.0
+  },
+  {
+    "name": "Seattle",
+    "alternateNames": "Gorad Siehtl,SEA,Seatl,Seattle,Seattlum,Siatl,Siatul,Siehtl,Sietl,Sietla,Sietlas,Sijetl,Siyaatil,Séatl,ciyattil,shiatoru,si'aitala,siaeteul,sietʼli,siyatal,siyatala,syatl,xi ya tu,Σιάτλ,Горад Сіэтл,Сиатъл,Сиетл,Сиэтл,Сијетл,Сієтл,Սիեթլ,סיאטל,سياتل,سیئٹل,سیاتل,سیاٹل,सिअ‍ॅटल,सीऐटल,সিয়াটল,சியாட்டில்,ಸಿಯಾಟಲ್,ซีแอตเทิล,სიეტლი,ስያትል,ស៊ីតថល,シアトル,西雅圖,시애틀",
+    "latitude": 47.60621,
+    "longitude": -122.33207,
+    "score": 0.9997283486822172
+  },
+  {
+    "name": "Seaside",
+    "alternateNames": "East Monterey,Seaside,Sijsajd,Sisajd,hai bin,sisa'ida,sysayd  kalyfrnya,sysydy,Сийсайд,Сисайд,Сисајд,سيسيدي,سیساید، کالیفرنیا,सीसाइड,海滨",
+    "latitude": 36.61107,
+    "longitude": -121.85162,
+    "score": 0.9135863132674624
+  },
+  {
+    "name": "Seal Beach",
+    "alternateNames": "Bay City,Seal Beach,Sijl Bijch,Sil Bich,hai bao tan,sila bica,silbichi,syl bych,syl bytsh,syl byz,Сийл Бийч,Сил Бич,סיל ביץ,سيل بيتش,سیل بیچ,सील बीच,海豹滩,실비치",
+    "latitude": 33.74141,
+    "longitude": -118.10479,
+    "score": 0.8876403562071423
+  },
+  {
+    "name": "Seagoville",
+    "alternateNames": "Sigovil,syghwfyl,sygwyl  tgzas,Сиговил,سيغوفيل,سیگویل، تگزاس,സീഗോവിൽ",
+    "latitude": 32.63958,
+    "longitude": -96.53832,
+    "score": 0.8037248837978217
+  },
+  {
+    "name": "Searcy",
+    "alternateNames": "Frankford,SRC,Searcy,Sersi,seosi,sirsi,syrsy,Серси,Серсі,سيرسي,سیرسی,सीर्सी,서시",
+    "latitude": 35.25064,
+    "longitude": -91.73625,
+    "score": 0.7934090805859773
+  },
+  {
+    "name": "Seabrook",
+    "alternateNames": "",
+    "latitude": 38.96805,
+    "longitude": -76.84658,
+    "score": 0.7268901636926111
+  },
+  {
+    "name": "Seaford",
+    "alternateNames": "Jerusalem South,Seaford",
+    "latitude": 40.66593,
+    "longitude": -73.48818,
+    "score": 0.7146851719871324
+  },
+  {
+    "name": "Seaham",
+    "alternateNames": "Seaham,Seaham Harbour,Sikhem,syham,Сихем,سیهام",
+    "latitude": 54.83903,
+    "longitude": -1.34575,
+    "score": 0.4495591285716263
+  },
+  {
+    "name": "Seaford",
+    "alternateNames": "Seaford i East Sussex,syfwrd  sasks shrqy,xi fu de,سیفورد، ساسکس شرقی,西福德",
+    "latitude": 50.77141,
+    "longitude": 0.10268,
+    "score": 0.418215370272012
+  },
+  {
+    "name": "Seabra",
+    "alternateNames": "Doutor Seabra",
+    "latitude": -12.41713,
+    "longitude": -41.77049,
+    "score": 0.22741528427071625
+  },
+  {
+    "name": "Seaford",
+    "alternateNames": "Seaford",
+    "latitude": -38.1,
+    "longitude": 145.13333,
+    "score": 0.0
+  }
+]
