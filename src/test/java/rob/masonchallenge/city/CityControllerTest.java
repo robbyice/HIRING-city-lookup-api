@@ -68,8 +68,8 @@ public class CityControllerTest {
                 .andExpect(status().is2xxSuccessful())
                 .andExpect(content()
                         .json("[" +
-                                "{\"name\":\"name1\",\"alternateName\":\"alternateName1\",\"latitude\":10.0,\"longitude\":20.0}," +
-                                "{\"name\":\"name2\",\"alternateName\":\"alternateName2\",\"latitude\":20.0,\"longitude\":40.0}" +
+                                "{\"name\":\"name1\",\"alternateNames\":\"alternateName1\",\"latitude\":10.0,\"longitude\":20.0}," +
+                                "{\"name\":\"name2\",\"alternateNames\":\"alternateName2\",\"latitude\":20.0,\"longitude\":40.0}" +
                                 "]"));
 
 
@@ -87,8 +87,8 @@ public class CityControllerTest {
                 .andExpect(status().is2xxSuccessful())
                 .andExpect(content()
                         .json("[" +
-                                "{\"name\":\"name1\",\"alternateName\":\"alternateName1\",\"latitude\":10.0,\"longitude\":20.0, \"score\": 1.0}," +
-                                "{\"name\":\"name2\",\"alternateName\":\"alternateName2\",\"latitude\":20.0,\"longitude\":40.0, \"score\": 0.0}" +
+                                "{\"name\":\"name1\",\"alternateNames\":\"alternateName1\",\"latitude\":10.0,\"longitude\":20.0, \"score\": 1.0}," +
+                                "{\"name\":\"name2\",\"alternateNames\":\"alternateName2\",\"latitude\":20.0,\"longitude\":40.0, \"score\": 0.0}" +
                                 "]"));
 
         verify(mockCityMatchingService).findMatchingCitiesNearLocation("searchTerm", 20.0, 40.0);
